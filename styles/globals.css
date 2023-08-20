@@ -1,0 +1,40 @@
+/*Now the CSS*/
+:root {
+  --connector-width: 2px;
+  --connector-default-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.draggable {
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.draggable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.edge {
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  transform-origin: top left;
+}
